@@ -120,6 +120,32 @@ const Hero = () => (
   </section>
 );
 
+const About = () => (
+  <section className="py-32 px-8 max-w-7xl mx-auto" id="sobre-mi">
+    <div className="max-w-3xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="font-headline text-4xl mb-12">Sobre mí</h2>
+        <div className="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+          <p>
+            Soy estudiante de la <span className="text-on-surface font-semibold">Licenciatura en Ciencias de la Computación</span>. Me interesan la programación y la tecnología como herramienta para analizar problemas y desarrollar soluciones de forma estructurada y eficiente.
+          </p>
+          <p>
+            Me caracterizo por el <span className="text-on-surface font-semibold">aprendizaje autodidacta</span>, el <span className="text-on-surface font-semibold">trabajo en equipo</span>, la <span className="text-on-surface font-semibold">curiosidad</span> y el <span className="text-on-surface font-semibold">aprendizaje continuo</span>.
+          </p>
+          <p>
+            Actualmente estoy buscando una oportunidad para continuar mi camino profesional en tecnología, donde pueda aplicar mis conocimientos de programación y análisis de datos y aportar valor dentro de un equipo.
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  </section>
+);
+
 const Projects = () => (
   <section className="py-32 px-8 max-w-7xl mx-auto" id="proyectos">
     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
@@ -408,6 +434,7 @@ export default function App() {
       <Navbar />
       <main className="pt-24">
         <Hero />
+        <About />
         <Projects />
         <Tools />
         <Contact />
