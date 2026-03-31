@@ -4,6 +4,7 @@
  */
 
 import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 import { 
   ArrowRight, 
   MoveRight, 
@@ -23,22 +24,47 @@ import {
   Menu
 } from "lucide-react";
 
-const Navbar = () => (
+const Navbar = () => {
+  const [activeSection, setActiveSection] = useState("inicio");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["inicio", "proyectos", "herramientas", "contacto"];
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(section);
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActive = (section: string) => activeSection === section;
+
+  return (
   <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm shadow-violet-900/5 transition-colors duration-500">
     <div className="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
       <span className="text-2xl font-bold font-noto-serif text-violet-800">Luca Martín Chicconi</span>
       <div className="hidden md:flex gap-8 items-center">
-        <a className="text-violet-900 font-semibold border-b-2 border-green-200 pb-1 font-noto-serif italic text-lg tracking-tight" href="#inicio">Inicio</a>
-        <a className="text-slate-600 hover:text-violet-600 transition-colors hover:bg-violet-50/50 rounded-lg px-3 py-1 font-noto-serif italic text-lg tracking-tight" href="#proyectos">Proyectos</a>
-        <a className="text-slate-600 hover:text-violet-600 transition-colors hover:bg-violet-50/50 rounded-lg px-3 py-1 font-noto-serif italic text-lg tracking-tight" href="#herramientas">Herramientas</a>
-        <a className="text-slate-600 hover:text-violet-600 transition-colors hover:bg-violet-50/50 rounded-lg px-3 py-1 font-noto-serif italic text-lg tracking-tight" href="#contacto">Contacto</a>
+        <a className={`font-semibold font-noto-serif italic text-lg tracking-tight transition-all duration-300 ${isActive("inicio") ? "text-violet-900 border-b-2 border-green-200 pb-1" : "text-slate-600 hover:text-violet-600 hover:bg-violet-50/50 rounded-lg px-3 py-1"}`} href="#inicio">Inicio</a>
+        <a className={`font-semibold font-noto-serif italic text-lg tracking-tight transition-all duration-300 ${isActive("proyectos") ? "text-violet-900 border-b-2 border-green-200 pb-1" : "text-slate-600 hover:text-violet-600 hover:bg-violet-50/50 rounded-lg px-3 py-1"}`} href="#proyectos">Proyectos</a>
+        <a className={`font-semibold font-noto-serif italic text-lg tracking-tight transition-all duration-300 ${isActive("herramientas") ? "text-violet-900 border-b-2 border-green-200 pb-1" : "text-slate-600 hover:text-violet-600 hover:bg-violet-50/50 rounded-lg px-3 py-1"}`} href="#herramientas">Herramientas</a>
+        <a className={`font-semibold font-noto-serif italic text-lg tracking-tight transition-all duration-300 ${isActive("contacto") ? "text-violet-900 border-b-2 border-green-200 pb-1" : "text-slate-600 hover:text-violet-600 hover:bg-violet-50/50 rounded-lg px-3 py-1"}`} href="#contacto">Contacto</a>
       </div>
       <button className="md:hidden text-primary">
         <Menu size={24} />
       </button>
     </div>
   </nav>
-);
+  );
+};
 
 const Hero = () => (
   <section className="relative px-8 py-20 lg:py-32 overflow-hidden" id="inicio">
@@ -99,7 +125,7 @@ const Projects = () => (
     <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
       <div className="max-w-xl">
         <h2 className="font-headline text-4xl mb-4">Proyectos Destacados</h2>
-        <p className="text-on-surface-variant leading-relaxed">Una selección de obras que exploran la intersección entre la estructura digital y la fluidez orgánica.</p>
+        <p className="text-on-surface-variant leading-relaxed">Una selección de proyectos que fui recolectando a lo largo de mi aprendizaje.</p>
       </div>
       <a className="text-primary font-bold flex items-center gap-2 group" href="#">
         Ver Galería Completa 
