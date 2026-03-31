@@ -1,20 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Hola soy **Luca**.
 
-# Run and deploy your AI Studio app
+## Sobre mí
 
-This contains everything you need to run your app locally.
+Soy estudiante de la **Licenciatura en Ciencias de la Computación**.
 
-View your app in AI Studio: https://ai.studio/apps/0960e92c-a196-41f0-959d-336405f66666
+Me interesan la **programación** y la **tecnología** como herramienta para analizar problemas y desarrollar soluciones de forma estructurada y eficiente.
 
-## Run Locally
+Me caracterizo por el **aprendizaje autodidacta**, el **trabajo en equipo**, la **curiosidad** y el **aprendizaje continuo**.
 
-**Prerequisites:**  Node.js
+## Oportunidades
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Actualmente estoy buscando una oportunidad para continuar mi camino profesional en **tecnología**, donde pueda aplicar mis conocimientos de **programación** y **análisis de datos** y aportar valor dentro de un equipo.
