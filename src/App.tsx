@@ -333,70 +333,70 @@ const Tools = () => (
 );
 
 const Contact = () => (
-  <section className="py-24 px-8 relative overflow-hidden" id="contacto">
-    <div className="max-w-5xl mx-auto bg-primary text-on-primary rounded-[3rem] p-12 md:p-20 relative overflow-hidden shadow-2xl">
+  <section className="py-12 sm:py-20 md:py-24 px-4 sm:px-8 relative overflow-hidden" id="contacto">
+    <div className="max-w-5xl mx-auto bg-primary text-on-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-20 relative overflow-hidden shadow-2xl">
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 organic-shape-1 -mr-20 -mt-20 blur-2xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/10 organic-shape-2 -ml-20 -mb-20 blur-2xl pointer-events-none"></div>
       
       <div className="relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl italic mb-6">Contacto</h2>
-          <p className="text-on-primary/80 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl italic mb-4 sm:mb-6">Contacto</h2>
+          <p className="text-on-primary/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed px-2">
             Estoy disponible para trabajo, proyectos freelance y colaboraciones. No dudes en escribirme.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <form className="space-y-4 bg-white/5 p-8 rounded-3xl backdrop-blur-md border border-white/10" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
+          <form className="space-y-4 bg-white/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl backdrop-blur-md border border-white/10" onSubmit={(e) => e.preventDefault()}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Nombre</label>
-                <input className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all" placeholder="Tu nombre" type="text" />
+                <input className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all text-sm sm:text-base" placeholder="Tu nombre" type="text" />
               </div>
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Email</label>
-                <input className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all" placeholder="hola@ejemplo.com" type="email" />
+                <input className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all text-sm sm:text-base" placeholder="hola@ejemplo.com" type="email" />
               </div>
             </div>
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Mensaje</label>
-              <textarea className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none resize-none transition-all" placeholder="Cuéntame sobre tu proyecto..." rows={3}></textarea>
+              <textarea className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none resize-none transition-all text-sm sm:text-base" placeholder="Cuéntame sobre tu proyecto..." rows={3}></textarea>
             </div>
-            <button className="w-full bg-white text-primary font-bold py-4 rounded-full hover:shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2" type="submit">
+            <button className="w-full bg-white text-primary font-bold py-3 sm:py-4 rounded-full hover:shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2 text-sm sm:text-base" type="submit">
               Comenzar Conversación
               <Send size={14} />
             </button>
           </form>
 
-          <div className="flex flex-col gap-6 lg:justify-center h-full">
+          <div className="flex flex-col gap-6 lg:justify-center">
             <div className="space-y-6">
-              <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-on-primary/50">Redes y Canales</h4>
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-on-primary/50">Redes y Canales</h4>
               <div className="flex flex-col gap-4">
                 <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="https://www.linkedin.com/in/luca-chicconi/" target="_blank">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
                     <UserCircle size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">LinkedIn</span>
-                    <span className="text-lg">Conectar profesionalmente</span>
+                    <span className="text-base sm:text-lg truncate">Conectar profesionalmente</span>
                   </div>
                 </a>
                 <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="https://github.com/LucaChicconi" target="_blank">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
                     <Blocks size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">GitHub</span>
-                    <span className="text-lg">Explorar repositorios</span>
+                    <span className="text-base sm:text-lg truncate">Explorar repositorios</span>
                   </div>
                 </a>
                 <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="mailto:lucachicconi1@gmail.com">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
                     <Mail size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">Email</span>
-                    <span className="text-lg">lucachicconi1@gmail.com</span>
+                    <span className="text-base sm:text-lg truncate">lucachicconi1@gmail.com</span>
                   </div>
                 </a>
               </div>
