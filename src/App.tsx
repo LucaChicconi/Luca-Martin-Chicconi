@@ -102,7 +102,7 @@ const Hero = () => (
           <img 
             alt="Luca's Profile Photo" 
             className="w-full h-full object-cover" 
-            src="https://lh3.googleusercontent.com/aida/ADBb0uj58txL4mHyrOiyg2oDqhw-uLvP0vrqmpMHHF27H3z15fRC9UaMMCzanz2QLBSA0nxJv8Q_LUUdalCM82yXxgrW1P-qeP-nNT8M6uSZyNjsV5-axymp4H73HKH-kiEiCtmiPfwNcNfEJ9mAzYmAW16O4w5e4S7CFUWVdG64sqNM9tOsCR33ikwGeEwdIRnsr0T3NMJjWiQlWv9ZQ668EbuK_eDZ42V0vBg5FogaelL2kGCFH6WnmBvI-nc19ACUYkccpSu0tAN0OFU" 
+            src="src\assets\imgs\FotoPerfil.png" 
             referrerPolicy="no-referrer"
           />
         </div>
@@ -173,7 +173,7 @@ const Projects = () => (
             <img 
               alt="uColorPalette" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-              src="https://lh3.googleusercontent.com/aida/ADBb0uhQYN5w5kzx7lle9XjZpPK63oik6f8lny7aAzybxHfkiL6pP9qZnv6CUzVZW5x72CpOHwcRTRT_Q9h1qpjYNzjJjss50srUWTgmEf81fSZGRXD4GGnPAOqS-mrf6gTt2stEHvW3hDiun1uI63icuErtg0Eee45pvxb9XS5UGZWIjdMF3Cd7Ceus4z1dkva3bruoKe9BuRlR5zXldq9AVB9g-midCeIqCngVbi75ISO36xW2iwukDDGvT0zvPBPpy75uzTFeRsSlNg0" 
+              src="src\assets\imgs\uColorPalette.png" 
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -201,18 +201,26 @@ const Projects = () => (
         transition={{ delay: 0.2 }}
         className="group mt-12 md:mt-0 lg:mt-24"
       >
-        <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-surface-container-high transition-transform duration-500 group-hover:-translate-y-2">
-          <img 
-            alt="Oasis Violeta" 
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3f3rFQiItAuHCPJePUcCW9pn3speH5EHxrN2QPrZ9YnnC1kQfASHMCoaZh2cXjrQ4Q_oDhwVNbXdCUGSmTDFLovNawJ2gJ9TZ3eT5T7JEv0AVd96kS46tHkOdyjaY_n3oZVgtenPL13T7mS1azQkmiBKF6NGscXYFXHR9HpqFkPaD7qXG6RDUufqdILcpH6C1a7mnznwWT_jneFp7SygABW_UykrZH9516gLj7C3mJ4VrKPT5A1rNH3R5PhRQ97GOpyrumN0qRJr8" 
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        </div>
-        <span className="text-xs font-bold tracking-widest uppercase text-secondary mb-2 block">Identidad Visual</span>
-        <h3 className="font-headline text-2xl mb-2">Oasis Violeta</h3>
-        <p className="text-on-surface-variant text-sm leading-relaxed">Sistema de marca para un santuario de meditación y bienestar holístico.</p>
+        <a className="block" href="https://securapass.netlify.app/" target="_blank">
+          <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-surface-container-high transition-transform duration-500 group-hover:-translate-y-2">
+            <img 
+              alt="Secura Pass" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+              src="src\assets\imgs\SecuraPass.png" 
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+        </a>
+        <span className="text-xs font-bold tracking-widest uppercase text-secondary mb-2 block">JavaScript</span>
+        <a className="block hover:text-primary transition-colors" href="https://securapass.netlify.app/" target="_blank">
+          <h3 className="font-headline text-2xl mb-2">Secura Pass</h3>
+        </a>
+        <p className="text-on-surface-variant text-sm leading-relaxed">Secura Pass es un generador de contraseñas y copiarlas con un solo clic.</p>
+                <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/secura-pass" target="_blank">
+                  Ver en GitHub
+                  <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
+                </a>
       </motion.div>
 
       {/* Project Card 3: Sinfonía Verde */}
@@ -247,23 +255,7 @@ const Tools = () => (
         <h2 className="font-headline text-4xl md:text-6xl text-on-surface italic">Mis herramientas</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-        {/* Tech Column 1: Diseño */}
-        <div className="relative group">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-              <Palette className="text-secondary" size={24} />
-            </div>
-            <h3 className="font-headline text-2xl">Diseño</h3>
-          </div>
-          <div className="flex flex-wrap gap-2 relative z-10">
-            {["Figma", "Adobe Illustrator", "Photoshop", "Lightroom", "Patrones de Diseño"].map(tool => (
-              <span key={tool} className="px-4 py-2 rounded-xl bg-secondary-container/30 text-on-secondary-container border border-secondary/10 hover:bg-secondary/10 transition-colors cursor-default">
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-        {/* Tech Column 2: Frontend */}
+        {/* Tech Column 1: Frontend */}
         <div className="relative group">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -279,7 +271,7 @@ const Tools = () => (
             ))}
           </div>
         </div>
-        {/* Tech Column 3: Backend */}
+        {/* Tech Column 2: Backend */}
         <div className="relative group">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center">
@@ -288,14 +280,14 @@ const Tools = () => (
             <h3 className="font-headline text-2xl">Backend & Programación</h3>
           </div>
           <div className="flex flex-wrap gap-2 relative z-10">
-            {["Node.js", "MongoDB", "Python", "Django", "C++", "Java"].map(tool => (
+            {["Node.js", "MongoDB", "Python", "Django", "C++", "Java","Patrones de Diseño"].map(tool => (
               <span key={tool} className="px-4 py-2 rounded-xl bg-tertiary-fixed/30 text-on-tertiary-fixed-variant border border-tertiary/10 hover:bg-tertiary/10 transition-colors cursor-default">
                 {tool}
               </span>
             ))}
           </div>
         </div>
-        {/* Tech Column 4: Data */}
+        {/* Tech Column 3: Data */}
         <div className="relative group">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
@@ -311,7 +303,7 @@ const Tools = () => (
             ))}
           </div>
         </div>
-        {/* Tech Column 5: Systems */}
+        {/* Tech Column 4: Systems */}
         <div className="relative group">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -322,6 +314,22 @@ const Tools = () => (
           <div className="flex flex-wrap gap-2 relative z-10">
             {["Git (GitHub, GitLab)", "Windows", "Linux"].map(tool => (
               <span key={tool} className="px-4 py-2 rounded-xl bg-primary-container/30 text-on-primary-container border border-primary/10 hover:bg-primary/10 transition-colors cursor-default">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* Tech Column 5: Diseño */}
+        <div className="relative group">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+              <Palette className="text-secondary" size={24} />
+            </div>
+            <h3 className="font-headline text-2xl">Diseño</h3>
+          </div>
+          <div className="flex flex-wrap gap-2 relative z-10">
+            {["Figma", "Adobe Illustrator", "Photoshop", "Lightroom"].map(tool => (
+              <span key={tool} className="px-4 py-2 rounded-xl bg-secondary-container/30 text-on-secondary-container border border-secondary/10 hover:bg-secondary/10 transition-colors cursor-default">
                 {tool}
               </span>
             ))}
@@ -411,7 +419,7 @@ const Contact = () => (
 const Footer = () => (
   <footer className="w-full relative overflow-hidden bg-emerald-50/30">
     <div className="flex flex-col items-center gap-6 py-12 px-4 text-center relative z-10">
-      <div className="flex gap-10 mb-4">
+      {/* <div className="flex gap-10 mb-4">
         <a className="text-emerald-700/70 hover:text-violet-600 transition-all duration-500 transform hover:translate-y-[-2px]" href="#">
           <Shield size={24} />
         </a>
@@ -421,9 +429,9 @@ const Footer = () => (
         <a className="text-emerald-700/70 hover:text-violet-600 transition-all duration-500 transform hover:translate-y-[-2px]" href="#">
           <Flower2 size={24} />
         </a>
-      </div>
+      </div> */}
       <p className="font-manrope text-sm tracking-wide uppercase text-emerald-800">
-        © 2024 The Botanical Atelier. Designed with Harmony.
+        © 2024 Todos los derechos reservados.
       </p>
     </div>
   </footer>
@@ -439,12 +447,12 @@ export default function App() {
         <Projects />
         <Tools />
         <Contact />
-        <section className="relative h-64 overflow-hidden">
+        {/* <section className="relative h-64 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-surface via-secondary-container/20 to-emerald-50/30"></div>
           <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
             <Flower size={320} />
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>
