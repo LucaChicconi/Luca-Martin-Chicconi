@@ -223,6 +223,8 @@ const Projects = () => (
         </a>
         <p className="text-on-surface-variant text-sm leading-relaxed">Secura Pass es un generador de contraseñas y copiarlas con un solo clic.</p>
                 <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/secura-pass" target="_blank">
+                  
+                  <Code size={18} />
                   Ver en GitHub
                   <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
                 </a>
