@@ -102,7 +102,7 @@ const Hero = () => (
           <img 
             alt="Luca's Profile Photo" 
             className="w-full h-full object-cover" 
-            src="src\assets\imgs\FotoPerfil.png" 
+            src="src/assets/imgs/FotoPerfil.png" 
             referrerPolicy="no-referrer"
           />
         </div>
@@ -173,7 +173,7 @@ const Projects = () => (
             <img 
               alt="uColorPalette" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-              src="src\assets\imgs\uColorPalette.png" 
+              src="src/assets/imgs/uColorPalette.png" 
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -206,7 +206,7 @@ const Projects = () => (
             <img 
               alt="Secura Pass" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-              src="src\assets\imgs\SecuraPass.png" 
+              src="src/assets/imgs/SecuraPass.png" 
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
