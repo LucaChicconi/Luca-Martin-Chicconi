@@ -231,7 +231,7 @@ const Projects = () => (
       </motion.div>
 
       {/* Project Card 3: Sinfonía Verde */}
-      <motion.div 
+      {/* <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -250,7 +250,7 @@ const Projects = () => (
         <span className="text-xs font-bold tracking-widest uppercase text-secondary mb-2 block">Desarrollo Web</span>
         <h3 className="font-headline text-2xl mb-2">Sinfonía Verde</h3>
         <p className="text-on-surface-variant text-sm leading-relaxed">Exploración de interfaces fluidas inspiradas en el crecimiento de las enredaderas.</p>
-      </motion.div>
+      </motion.div> */}
     </div>
   </section>
 );
