@@ -74,18 +74,18 @@ const Navbar = () => {
 
 const Hero = () => (
   <section className="relative px-8 py-20 lg:py-32 overflow-hidden" id="inicio">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="lg:col-span-6 z-10"
+        className="lg:col-span-6 z-10 min-w-0"
       >
-        <h1 className="font-headline text-5xl md:text-7xl text-on-surface leading-tight tracking-tight mb-6 italic">
+        <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface leading-tight tracking-tight mb-6 italic">
           Hola, soy <span className="text-primary">Luca</span>.
         </h1>
-        <p className="font-headline text-2xl md:text-3xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+        <p className="font-headline text-base sm:text-xl md:text-2xl lg:text-3xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
           Desarrollador full stack, construyo proyectos eficientes y escalables.
         </p>
         <div className="flex flex-wrap gap-4">
@@ -101,9 +101,9 @@ const Hero = () => (
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="lg:col-span-6 relative"
+        className="hidden md:flex lg:col-span-6 relative justify-begin min-w-0"
       >
-        <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl z-20 transform rotate-2">
+        <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl z-20 transform rotate-2">
           <img 
             alt="Luca's Profile Photo" 
             className="w-full h-full object-cover" 
@@ -111,16 +111,8 @@ const Hero = () => (
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-50 blur-3xl"></div>
-        <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-primary-container rounded-full mix-blend-multiply opacity-30 blur-3xl"></div>
-        
-        <div className="absolute bottom-12 -left-8 z-30 bg-surface-container-lowest p-6 rounded-xl shadow-xl flex items-center gap-4 border border-outline-variant/10">
-          <div className="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-container">
-            <Flower2 size={24} />
-          </div>
-          <div>
-          </div>
-        </div>
+        <div className="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
+        <div className="absolute -bottom-5 -left-40 w-45 h-45 bg-primary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
       </motion.div>
     </div>
   </section>
