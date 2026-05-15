@@ -28,6 +28,7 @@ import {
 import fotoPerfil from './assets/imgs/FotoPerfil.png';
 import ucolorpaletteImg from './assets/imgs/uColorPalette.png';
 import securapassImg from './assets/imgs/SecuraPass.png';
+import hestiaImg from './assets/imgs/HestIA.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -222,27 +223,37 @@ const Projects = () => (
                 </a>
       </motion.div>
 
-      {/* Project Card 3: Sinfonía Verde */}
-      {/* <motion.div 
+      { /* Project Card 3: HestIA (Work in Progress) */ }
+      {       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
+        transition={{ delay: 0.2 }}
         className="group"
       >
-        <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-surface-container-high transition-transform duration-500 group-hover:-translate-y-2">
-          <img 
-            alt="Sinfonía Verde" 
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnqDRz9UGCIYpifoNymeSc3Xn1SgUw-VCLu5KVZTPvIy9I4Ij_Hsxnc8OHwW4rDyG3ZrDLBpxryShSeWLRfhvVFr9_yY7BDh3xmHz4A1eLwesGdLTkldPdXqXpxqjWrWHLxOE_5opSbdsSdLIKilA11Rw9FYBNICGn0YGECA4lat9xvKncAoX8YDBQXdT-KAdiEDwcXfBUAkqSM69nOAAhQVdfR1rQR8lMcYFyw9StItRxGy_litLGFRdLdQ4vLoeIvhmWYIK4kPpa" 
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        </div>
-        <span className="text-xs font-bold tracking-widest uppercase text-secondary mb-2 block">Desarrollo Web</span>
-        <h3 className="font-headline text-2xl mb-2">Sinfonía Verde</h3>
-        <p className="text-on-surface-variant text-sm leading-relaxed">Exploración de interfaces fluidas inspiradas en el crecimiento de las enredaderas.</p>
-      </motion.div> */}
+        <a className="block" href="https://hestiacocina.netlify.app/" target="_blank">
+          <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-surface-container-high transition-transform duration-500 group-hover:-translate-y-2">
+            <img 
+              alt="HestIA" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+              src={hestiaImg} 
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+        </a>
+        <span className="text-xs font-bold tracking-widest uppercase text-secondary mb-2 block">Proyecto Integrador Fundación Pescar</span>
+        <a className="block hover:text-primary transition-colors" href="https://hestiacocina.netlify.app/" target="_blank">
+          <h3 className="font-headline text-2xl mb-2">HestIA (Work in progress)</h3>
+        </a>
+        <p className="text-on-surface-variant text-sm leading-relaxed">HestIA es una aplicación de cocina orientada a la creación de recetas ricas, variadas y saludables. Clickea para ver el prototipo!</p>
+                {/* <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/hestia" target="_blank">
+                  
+                  <Code size={18} />
+                  Ver en GitHub
+                  <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
+                </a> */}
+      </motion.div>}
     </div>
   </section>
 );
