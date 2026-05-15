@@ -38,7 +38,7 @@ const Navbar = () => {
 
     const updateActiveSection = () => {
       const anchorY = window.innerHeight * 0.4;
-      let nextActiveSection = sections[0];
+      let nextActiveSection = "inicio";
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -52,9 +52,21 @@ const Navbar = () => {
           nextActiveSection = section;
           break;
         }
+      }
 
-        if (rect.top <= anchorY) {
-          nextActiveSection = section;
+      if (nextActiveSection === "inicio") {
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const element = document.getElementById(sections[i]);
+          if (!element) {
+            continue;
+          }
+
+          const rect = element.getBoundingClientRect();
+
+          if (rect.top <= anchorY) {
+            nextActiveSection = sections[i];
+            break;
+          }
         }
       }
 
