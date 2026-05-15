@@ -102,12 +102,13 @@ const Hero = () => (
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="hidden md:flex lg:col-span-6 relative justify-begin min-w-0"
+        className="hidden md:flex lg:col-span-6 relative justify-center items-center min-w-0"
       >
-        <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl z-20 transform rotate-2">
-          <img 
-            alt="Luca's Profile Photo" 
-            className="w-full h-full object-cover" 
+        <div className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[440px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl z-20 transform rotate-2 flex items-center justify-center">
+            <img 
+              alt="Luca's Profile Photo" 
+              className="w-full h-full object-cover object-center" 
+              style={{ objectPosition: '50% 5%' }}
             src={fotoPerfil} 
             referrerPolicy="no-referrer"
           />
