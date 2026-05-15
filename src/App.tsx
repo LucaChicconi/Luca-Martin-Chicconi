@@ -74,8 +74,8 @@ const Navbar = () => {
 };
 
 const Hero = () => (
-  <section className="relative px-8 py-20 lg:py-32 overflow-hidden" id="inicio">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
+  <section className="relative px-8 py-20 lg:py-32 overflow-hidden max-w-7xl mx-auto" id="inicio">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -113,8 +113,8 @@ const Hero = () => (
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
-        <div className="absolute -bottom-5 -left-40 w-45 h-45 bg-primary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
+        <div className="absolute -top-10 -left-5 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
+        <div className="absolute -bottom-5 -left-40 w-35 h-45 bg-primary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
       </motion.div>
     </div>
   </section>
@@ -260,8 +260,7 @@ const Projects = () => (
 );
 
 const Tools = () => (
-  <section className="py-32 px-8 overflow-hidden bg-surface-container-low/30" id="herramientas">
-    <div className="max-w-7xl mx-auto">
+  <section className="py-32 px-8 max-w-7xl mx-auto overflow-hidden bg-surface-container-low/30" id="herramientas">
       <div className="text-center mb-24">
         <h2 className="font-headline text-4xl md:text-6xl text-on-surface italic">Mis herramientas</h2>
       </div>
@@ -347,7 +346,6 @@ const Tools = () => (
           </div>
         </div>
       </div>
-    </div>
   </section>
 );
 
@@ -442,7 +440,7 @@ const Footer = () => (
         </a>
       </div> */}
       <p className="font-manrope text-sm tracking-wide uppercase text-emerald-800">
-        © 2024 Todos los derechos reservados.
+        © 2026 Todos los derechos reservados.
       </p>
     </div>
   </footer>
