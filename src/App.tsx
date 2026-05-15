@@ -77,11 +77,11 @@ const Hero = () => (
   <section className="relative px-8 py-20 lg:py-32 overflow-hidden max-w-7xl mx-auto" id="inicio">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
       <motion.div 
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="lg:col-span-6 z-10 min-w-0"
+        className="lg:col-span-6 z-10 min-w-0 md:order-2"
       >
         <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-on-surface leading-tight tracking-tight mb-6 italic">
           Hola, soy <span className="text-primary">Luca</span>.
@@ -102,7 +102,7 @@ const Hero = () => (
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="hidden md:flex lg:col-span-6 relative justify-center items-center min-w-0"
+        className="hidden md:flex lg:col-span-6 relative justify-center items-center min-w-0 md:order-1"
       >
         <div className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[440px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl z-20 transform rotate-2 flex items-center justify-center">
             <img 
@@ -113,8 +113,8 @@ const Hero = () => (
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="absolute -top-10 -left-5 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
-        <div className="absolute -bottom-5 -left-40 w-35 h-45 bg-primary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
+        <div className="absolute -top-10 -right-5 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
+        <div className="absolute -bottom-5 -right-105 w-35 h-45 bg-primary-container rounded-full mix-blend-multiply opacity-90 blur-3xl"></div>
       </motion.div>
     </div>
   </section>
