@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 
 // Importar imágenes
-import fotoPerfil from './assets/imgs/FotoPerfil.png';
+import fotoPerfil from './assets/imgs/Foto-Perfil-Nueva.jpg';
 import ucolorpaletteImg from './assets/imgs/uColorPalette.png';
 import securapassImg from './assets/imgs/SecuraPass.png';
 import hestiaImg from './assets/imgs/HestIA.png';
