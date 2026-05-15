@@ -34,22 +34,49 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["inicio", "proyectos", "herramientas", "contacto"];
-      
+    const sections = ["inicio", "sobre-mi", "proyectos", "herramientas", "contacto"];
+
+    const updateActiveSection = () => {
+      const anchorY = window.innerHeight * 0.4;
+      let nextActiveSection = sections[0];
+
       for (const section of sections) {
         const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 100) {
-            setActiveSection(section);
-          }
+        if (!element) {
+          continue;
+        }
+
+        const rect = element.getBoundingClientRect();
+
+        if (rect.top <= anchorY && rect.bottom > anchorY) {
+          nextActiveSection = section;
+          break;
+        }
+
+        if (rect.top <= anchorY) {
+          nextActiveSection = section;
         }
       }
+
+      setActiveSection((currentSection) => (currentSection === nextActiveSection ? currentSection : nextActiveSection));
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    let frameId = 0;
+
+    const handleScroll = () => {
+      window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   const isActive = (section: string) => activeSection === section;
@@ -121,8 +148,8 @@ const Hero = () => (
 );
 
 const About = () => (
-  <section className="py-32 px-8 max-w-7xl mx-auto" id="sobre-mi">
-    <div className="max-w-3xl mx-auto">
+  <section className="py-40 md:py-48 px-8 max-w-7xl mx-auto min-h-[70vh] flex items-center" id="sobre-mi">
+    <div className="max-w-4xl mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
