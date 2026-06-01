@@ -347,7 +347,7 @@ const Tools = () => (
           </div>
           <div className="flex flex-wrap gap-2 relative z-10">
             {["JavaScript", "HTML", "CSS", "Tailwind", "React"].map(tool => (
-              <span key={tool} className="px-4 py-2 rounded-xl bg-primary-container/30 text-on-primary-container border border-primary/10 hover:bg-primary/10 transition-colors cursor-default">
+              <span key={tool} className="px-4 py-2 rounded-xl bg-primary-container text-on-primary-container border border-primary/40 hover:bg-secondary/40 hover:text-black/80 transition-colors cursor-default">
                 {tool}
               </span>
             ))}
@@ -362,7 +362,7 @@ const Tools = () => (
             <h3 className="font-headline text-2xl">Backend & Programación</h3>
           </div>
           <div className="flex flex-wrap gap-2 relative z-10">
-            {["Node.js", "MongoDB", "Python", "Django", "C++", "Java","Patrones de Diseño"].map(tool => (
+            {["Node.js", "MongoDB", "PostgreSQL","Supabase" ,"Python", "Django", "C++", "Java","Patrones de Diseño"].map(tool => (
               <span key={tool} className="px-4 py-2 rounded-xl bg-tertiary-fixed/30 text-on-tertiary-fixed-variant border border-tertiary/10 hover:bg-tertiary/10 transition-colors cursor-default">
                 {tool}
               </span>
@@ -379,7 +379,7 @@ const Tools = () => (
           </div>
           <div className="flex flex-wrap gap-2 relative z-10">
             {["Pandas", "Seaborn", "MatPlotLib"].map(tool => (
-              <span key={tool} className="px-4 py-2 rounded-xl bg-secondary-container/30 text-on-secondary-container border border-secondary/10 hover:bg-secondary/10 transition-colors cursor-default">
+              <span key={tool} className="px-4 py-2 rounded-xl bg-secondary-container/30 text-on-secondary-container border border-primary/40 hover:bg-secondary/40 hover:text-black/80 transition-colors cursor-default">
                 {tool}
               </span>
             ))}
@@ -395,7 +395,7 @@ const Tools = () => (
           </div>
           <div className="flex flex-wrap gap-2 relative z-10">
             {["Git (GitHub, GitLab)", "Windows", "Linux"].map(tool => (
-              <span key={tool} className="px-4 py-2 rounded-xl bg-primary-container/30 text-on-primary-container border border-primary/10 hover:bg-primary/10 transition-colors cursor-default">
+              <span key={tool} className="px-4 py-2 rounded-xl bg-primary-container text-on-primary-container border border-primary/40 hover:bg-secondary/40 hover:text-black/80 transition-colors cursor-default">
                 {tool}
               </span>
             ))}
