@@ -29,6 +29,7 @@ import fotoPerfil from './assets/imgs/Foto-Perfil-Nueva.jpg';
 import ucolorpaletteImg from './assets/imgs/uColorPalette.png';
 import securapassImg from './assets/imgs/SecuraPass.png';
 import hestiaImg from './assets/imgs/HestIA.png';
+import prodeImg from './assets/imgs/ProdeMundial.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -263,8 +264,40 @@ const Projects = () => (
                 </a>
       </motion.div>
 
-      { /* Project Card 3: HestIA (Work in Progress) */ }
-      {       <motion.div 
+      {/* Proyecto 3 : Prode mundial 2026 */}
+      {<motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="group"
+      >
+        <a className="block" href="https://prode-mundial-test.vercel.app/#/login" target="_blank">
+          <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-surface-container-high transition-transform duration-500 group-hover:-translate-y-2">
+            <img 
+              alt="prode mundial 2026" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+              src={prodeImg} 
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </div>
+        </a>
+        <span className="text-xs font-bold tracking-widest uppercase text-secondary mb-2 block">Proyecto personal del mes</span>
+        <a className="block hover:text-primary transition-colors" href="https://prode-mundial-test.vercel.app/#/login" target="_blank">
+          <h3 className="font-headline text-2xl mb-2">Prode Mundial 2026</h3>
+        </a>
+        <p className="text-on-surface-variant text-sm leading-relaxed">El clásico prode que los argentinos jugamos todos los mundiales. El stack de Frontend es React 19 con un toque de Tailwind CSS. Para el backend elegí aprender a usar Supabase y hacer las querys de SQL a través del editor. Tiene cargados resultados de prueba para que checkees las funcionalidades! Clickea para entrar!</p>
+                {<a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/prode-mundial-test" target="_blank">
+                  
+                  <Code size={18} />
+                  Ver en GitHub
+                  <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
+                </a> }
+      </motion.div>}
+
+      { /* Project Card 4: HestIA (Work in Progress) */ }
+      {<motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
