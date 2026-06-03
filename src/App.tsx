@@ -5,6 +5,7 @@
 
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { 
   ArrowRight, 
   MoveRight, 
@@ -193,10 +194,6 @@ const Projects = () => (
         <h2 className="font-headline text-4xl mb-4">Proyectos Destacados</h2>
         <p className="text-on-surface-variant leading-relaxed">Una selección de proyectos que fui recolectando a lo largo de mi aprendizaje.</p>
       </div>
-      <a className="text-primary font-bold flex items-center gap-2 group" href="#">
-        Ver Galería Completa 
-        <MoveRight className="transition-transform group-hover:translate-x-1" size={24} />
-      </a>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -232,7 +229,7 @@ const Projects = () => (
         </a>
       </motion.div>
 
-      {/* Project Card 2: Oasis Violeta */}
+      {/* Project Card 2: Secura Pass */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -256,16 +253,15 @@ const Projects = () => (
           <h3 className="font-headline text-2xl mb-2">Secura Pass</h3>
         </a>
         <p className="text-on-surface-variant text-sm leading-relaxed">Secura Pass es un generador de contraseñas y copiarlas con un solo clic.</p>
-                <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/secura-pass" target="_blank">
-                  
-                  <Code size={18} />
-                  Ver en GitHub
-                  <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
-                </a>
+        <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/secura-pass" target="_blank">
+          <Code size={18} />
+          Ver en GitHub
+          <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
+        </a>
       </motion.div>
 
-      {/* Proyecto 3 : Prode mundial 2026 */}
-      {<motion.div 
+      {/* Project Card 3: Prode Mundial 2026 */}
+      <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -288,16 +284,15 @@ const Projects = () => (
           <h3 className="font-headline text-2xl mb-2">Prode Mundial 2026</h3>
         </a>
         <p className="text-on-surface-variant text-sm leading-relaxed">El clásico prode que los argentinos jugamos todos los mundiales. El stack de Frontend es React 19 con un toque de Tailwind CSS. Para el backend elegí aprender a usar Supabase y hacer las querys de SQL a través del editor. Tiene cargados resultados de prueba para que checkees las funcionalidades! Clickea para entrar!</p>
-                {<a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/prode-mundial-test" target="_blank">
-                  
-                  <Code size={18} />
-                  Ver en GitHub
-                  <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
-                </a> }
-      </motion.div>}
+        <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/prode-mundial-test" target="_blank">
+          <Code size={18} />
+          Ver en GitHub
+          <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
+        </a>
+      </motion.div>
 
-      { /* Project Card 4: HestIA (Work in Progress) */ }
-      {<motion.div 
+      {/* Project Card 4: HestIA */}
+      <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -320,13 +315,7 @@ const Projects = () => (
           <h3 className="font-headline text-2xl mb-2">HestIA (Work in progress)</h3>
         </a>
         <p className="text-on-surface-variant text-sm leading-relaxed">HestIA es una aplicación de cocina orientada a la creación de recetas ricas, variadas y saludables. Clickea para ver el prototipo!</p>
-                {/* <a className="mt-4 flex items-center gap-2 text-sm font-bold text-primary hover:opacity-80 transition-all group/link" href="https://github.com/LucaChicconi/hestia" target="_blank">
-                  
-                  <Code size={18} />
-                  Ver en GitHub
-                  <ArrowUpRight className="transition-transform group-hover/link:translate-x-1" size={12} />
-                </a> */}
-      </motion.div>}
+      </motion.div>
     </div>
   </section>
 );
@@ -421,96 +410,157 @@ const Tools = () => (
   </section>
 );
 
-const Contact = () => (
-  <section className="py-12 sm:py-20 md:py-24 px-4 sm:px-8 relative overflow-hidden" id="contacto">
-    <div className="max-w-5xl mx-auto bg-primary text-on-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-20 relative overflow-hidden shadow-2xl">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 organic-shape-1 -mr-20 -mt-20 blur-2xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/10 organic-shape-2 -ml-20 -mb-20 blur-2xl pointer-events-none"></div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl italic mb-4 sm:mb-6">Contacto</h2>
-          <p className="text-on-primary/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed px-2">
-            Estoy disponible para trabajo, proyectos freelance y colaboraciones. No dudes en escribirme.
-          </p>
-        </div>
+const Contact = () => {
+  const [nombre, setNombre]   = useState("");
+  const [email, setEmail]     = useState("");
+  const [mensaje, setMensaje] = useState("");
+  const [estado, setEstado]   = useState<"idle" | "enviando" | "ok" | "error">("idle");
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
-          <form className="space-y-4 bg-white/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl backdrop-blur-md border border-white/10" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Nombre</label>
-                <input className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all text-sm sm:text-base" placeholder="Tu nombre" type="text" />
-              </div>
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Email</label>
-                <input className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all text-sm sm:text-base" placeholder="hola@ejemplo.com" type="email" />
-              </div>
-            </div>
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Mensaje</label>
-              <textarea className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none resize-none transition-all text-sm sm:text-base" placeholder="Cuéntame sobre tu proyecto..." rows={3}></textarea>
-            </div>
-            <button className="w-full bg-white text-primary font-bold py-3 sm:py-4 rounded-full hover:shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2 text-sm sm:text-base" type="submit">
-              Comenzar Conversación
-              <Send size={14} />
-            </button>
-          </form>
+  const handleSubmit = async () => {
+    if (!nombre.trim() || !email.trim() || !mensaje.trim()) return;
+    setEstado("enviando");
 
-          <div className="flex flex-col gap-6 lg:justify-center">
-            <div className="space-y-6">
-              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-on-primary/50">Redes y Canales</h4>
-              <div className="flex flex-col gap-4">
-                <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="https://www.linkedin.com/in/luca-chicconi/" target="_blank">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
-                    <UserCircle size={24} />
-                  </div>
-                  <div className="min-w-0">
-                    <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">LinkedIn</span>
-                    <span className="text-base sm:text-lg truncate">Conectar profesionalmente</span>
-                  </div>
-                </a>
-                <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="https://github.com/LucaChicconi" target="_blank">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
-                    <Blocks size={24} />
-                  </div>
-                  <div className="min-w-0">
-                    <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">GitHub</span>
-                    <span className="text-base sm:text-lg truncate">Explorar repositorios</span>
-                  </div>
-                </a>
-                <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="mailto:lucachicconi1@gmail.com">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
-                    <Mail size={24} />
-                  </div>
-                  <div className="min-w-0">
-                    <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">Email</span>
-                    <span className="text-base sm:text-lg truncate">lucachicconi1@gmail.com</span>
-                  </div>
-                </a>
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        { nombre, email, mensaje },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      setEstado("ok");
+      setNombre("");
+      setEmail("");
+      setMensaje("");
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setEstado("error");
+    }
+  };
+
+  return (
+    <section className="py-12 sm:py-20 md:py-24 px-4 sm:px-8 relative overflow-hidden" id="contacto">
+      <div className="max-w-5xl mx-auto bg-primary text-on-primary rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-20 relative overflow-hidden shadow-2xl">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 organic-shape-1 -mr-20 -mt-20 blur-2xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/10 organic-shape-2 -ml-20 -mb-20 blur-2xl pointer-events-none"></div>
+        
+        <div className="relative z-10">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl italic mb-4 sm:mb-6">Contacto</h2>
+            <p className="text-on-primary/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed px-2">
+              Estoy disponible para trabajo, proyectos freelance y colaboraciones. No dudes en escribirme.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
+
+            {/* FORMULARIO */}
+            <div className="space-y-4 bg-white/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl backdrop-blur-md border border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Nombre</label>
+                  <input
+                    value={nombre}
+                    onChange={(e) => setNombre(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all text-sm sm:text-base"
+                    placeholder="Tu nombre"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Email</label>
+                  <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none transition-all text-sm sm:text-base"
+                    placeholder="hola@ejemplo.com"
+                    type="email"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-on-primary/60 mb-1">Mensaje</label>
+                <textarea
+                  value={mensaje}
+                  onChange={(e) => setMensaje(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:ring-2 focus:ring-white/30 focus:border-transparent outline-none resize-none transition-all text-sm sm:text-base"
+                  placeholder="Cuéntame sobre tu proyecto..."
+                  rows={3}
+                />
+              </div>
+
+              <button
+                onClick={handleSubmit}
+                disabled={estado === "enviando" || estado === "ok"}
+                className="w-full bg-white text-primary font-bold py-3 sm:py-4 rounded-full hover:shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100"
+              >
+                {estado === "enviando" && "Enviando..."}
+                {estado === "ok"       && "¡Mensaje enviado! ✓"}
+                {estado === "error"    && (
+                  <span onClick={() => setEstado("idle")} className="cursor-pointer">
+                    Error — Reintentar
+                  </span>
+                )}
+                {estado === "idle" && (
+                  <>
+                    Comenzar Conversación
+                    <Send size={14} />
+                  </>
+                )}
+              </button>
+
+              {estado === "error" && (
+                <p className="text-red-300 text-xs text-center mt-1">
+                  Hubo un error al enviar. Intentá de nuevo o escribime directamente.
+                </p>
+              )}
+            </div>
+
+            {/* REDES Y CANALES */}
+            <div className="flex flex-col gap-6 lg:justify-center">
+              <div className="space-y-6">
+                <h4 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-on-primary/50">Redes y Canales</h4>
+                <div className="flex flex-col gap-4">
+                  <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="https://www.linkedin.com/in/luca-chicconi/" target="_blank">
+                    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
+                      <UserCircle size={24} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">LinkedIn</span>
+                      <span className="text-base sm:text-lg truncate">Conectar profesionalmente</span>
+                    </div>
+                  </a>
+                  <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="https://github.com/LucaChicconi" target="_blank">
+                    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
+                      <Blocks size={24} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">GitHub</span>
+                      <span className="text-base sm:text-lg truncate">Explorar repositorios</span>
+                    </div>
+                  </a>
+                  <a className="flex items-center gap-4 group hover:translate-x-2 transition-transform" href="mailto:lucachicconi1@gmail.com">
+                    <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-primary transition-all">
+                      <Mail size={24} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block text-xs text-on-primary/60 uppercase font-bold tracking-widest">Email</span>
+                      <span className="text-base sm:text-lg truncate">lucachicconi1@gmail.com</span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Footer = () => (
   <footer className="w-full relative overflow-hidden bg-emerald-50/30">
     <div className="flex flex-col items-center gap-6 py-12 px-4 text-center relative z-10">
-      {/* <div className="flex gap-10 mb-4">
-        <a className="text-emerald-700/70 hover:text-violet-600 transition-all duration-500 transform hover:translate-y-[-2px]" href="#">
-          <Shield size={24} />
-        </a>
-        <a className="text-emerald-700/70 hover:text-violet-600 transition-all duration-500 transform hover:translate-y-[-2px]" href="#">
-          <Flower size={24} />
-        </a>
-        <a className="text-emerald-700/70 hover:text-violet-600 transition-all duration-500 transform hover:translate-y-[-2px]" href="#">
-          <Flower2 size={24} />
-        </a>
-      </div> */}
       <p className="font-manrope text-sm tracking-wide uppercase text-emerald-800">
         © 2026 Todos los derechos reservados.
       </p>
@@ -528,12 +578,6 @@ export default function App() {
         <Projects />
         <Tools />
         <Contact />
-        {/* <section className="relative h-64 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-surface via-secondary-container/20 to-emerald-50/30"></div>
-          <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
-            <Flower size={320} />
-          </div>
-        </section> */}
       </main>
       <Footer />
     </div>
